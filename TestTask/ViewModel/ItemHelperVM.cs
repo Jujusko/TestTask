@@ -62,6 +62,8 @@ namespace TestTask.ViewModel
 
                       db.Items.Add(s);
                       db.SaveChanges();
+
+                      Items.Add(new(s.Name, s.IsHidden, s.Id));
                   }));
             }
         }
